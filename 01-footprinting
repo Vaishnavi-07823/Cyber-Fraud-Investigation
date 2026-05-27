@@ -1,0 +1,80 @@
+# Module 01 – Footprinting & Reconnaissance
+
+This was the first module I seriously sat down with, and honestly it took me a while 
+to realize how much information is publicly available about any target before you even 
+touch a single tool.
+
+My local lab setup: Kali Linux running on VirtualBox, with a separate Windows VM 
+acting as the target machine.
+
+---
+
+## What I was trying to do
+
+The goal was simple — gather as much information about my target as possible 
+without actively interacting with it (passive recon), and then move to active recon 
+using actual tools.
+
+---
+
+## Passive Recon – Starting with Google Dorks
+
+Before opening Kali, I just opened a browser and tried some Google dorks on a 
+dummy domain I created locally. The idea was to understand what an attacker 
+sees before they even begin.
+
+Some dorks I practiced with:
+
+- `site:target.com filetype:pdf` – finds exposed documents  
+- `intitle:"index of"` – looks for open directories  
+- `inurl:admin` – finds admin panels  
+
+It felt weirdly simple. Like, you don't need any fancy tool to start finding 
+things — just knowing how to search differently is enough.
+
+---
+
+## Active Recon – theHarvester
+
+Next I ran theHarvester on my test domain from Kali terminal:
+
+```bash
+theHarvester -d testdomain.local -b google
+```
+
+Didn't get much since it was local, but I understood the flow — 
+it scrapes emails, subdomains, IPs linked to the domain from public sources.
+
+For a real domain this would return a lot. Good starting point before 
+jumping into Nmap.
+
+---
+
+## DNS Footprinting
+
+This was actually interesting. I used `nslookup` and `dig` on my local DNS setup:
+
+```bash
+nslookup testdomain.local
+dig testdomain.local ANY
+```
+
+`dig ANY` returns all DNS record types at once — A, MX, NS, TXT. 
+Once I saw the NS records, I tried a zone transfer just to see if it's misconfigured:
+
+```bash
+dig axfr testdomain.local @nameserver
+```
+
+In a real misconfigured server, this dumps the entire DNS zone — 
+basically handing you the internal network map. Scary how common this used to be.
+
+---
+
+## What I learned
+
+Footprinting is less about tools and more about patience. 
+The more time you spend here, the less guessing you do later. 
+I used to want to jump straight to scanning — now I get why recon comes first.
+
+Next up → Module 02: Scanning Networks (Nmap deep dive)
