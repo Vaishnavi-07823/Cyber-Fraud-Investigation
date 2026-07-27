@@ -7,7 +7,7 @@ To document standard practices followed while handling digital evidence during c
 - Identification of digital devices such as mobile phones, laptops, and storage media.
 - Use of write blockers to prevent data modification.
 - Documentation of device condition before acquisition.
-
+- 
 ## Chain of Custody
 - Maintaining detailed logs of evidence collection, transfer, and access.
 - Assigning unique identifiers to each piece of evidence.
