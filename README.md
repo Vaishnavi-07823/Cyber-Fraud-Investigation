@@ -9,7 +9,6 @@ This project presents a structured, case-based analysis of cyber fraud incidents
 - Learn proper handling and preservation of digital evidence
 - Develop analytical thinking for cyber crime response
 
-
 ## Contents
 - Phishing attack flow analysis
 - Digital evidence handling procedures
