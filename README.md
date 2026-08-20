@@ -7,7 +7,7 @@ This project presents a structured, case-based analysis of cyber fraud incidents
 - Understand common cyber fraud and phishing attack patterns
 - Document investigation workflows followed in cyber crime cases
 - Learn proper handling and preservation of digital evidence
-- Develop analytical thinking for cyber crime response 
+- Develop analytical thinking for cyber crime response  
 
 ## Contents
 - Phishing attack flow analysis
