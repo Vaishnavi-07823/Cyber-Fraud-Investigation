@@ -12,7 +12,7 @@ To document standard practices followed while handling digital evidence during c
 - Maintaining detailed logs of evidence collection, transfer, and access.
 - Assigning unique identifiers to each piece of evidence.
 - Ensuring authorized access only.
-- 
+ 
 ## Evidence Preservation
 - Creating forensic images using trusted tools.
 - Secure storage of original evidence.
