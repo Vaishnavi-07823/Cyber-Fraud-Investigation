@@ -2,7 +2,7 @@
 
 ## Overview
 This project presents a structured, case-based analysis of cyber fraud incidents, focusing on investigation workflow, digital evidence handling, and attack pattern understanding. The work aligns with cyber crime investigation practices and CEH learning objectives.
-
+ 
 ## Project Objectives
 - Understand common cyber fraud and phishing attack patterns
 - Document investigation workflows followed in cyber crime cases
